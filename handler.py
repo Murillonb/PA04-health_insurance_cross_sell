@@ -11,7 +11,7 @@ model = pickle.load(open('model/RandomForestModel.pkl', 'rb'))
 
 app = Flask(__name__)
 
-@app.route('health_insurance/predict', methods=['POST'])
+@app.route('/health_insurance/predict', methods=['POST'])
 def health_insurance():
     test_json = request.get_json()
     
