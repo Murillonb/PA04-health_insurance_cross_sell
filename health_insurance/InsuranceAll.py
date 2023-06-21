@@ -63,7 +63,7 @@ class InsuranceAll(object):
         cols = []
         # separando as colunas ausentes
         for x in cols_selected:        
-            if (x in df5.cols) == False:
+            if (x in df5.columns) == False:
                 cols.append(x)        
         
         # adicionando colunas ausentes com valor 0
@@ -74,7 +74,7 @@ class InsuranceAll(object):
         # fillna
         df5 = df5.fillna(0)
         
-        return df5
+        return df5[cols_selected]
 
     def get_prediction(self, model, original_data, test_data):
         # modelo
