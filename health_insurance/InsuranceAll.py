@@ -81,6 +81,6 @@ class InsuranceAll(object):
         pred = model.predict_proba(test_data)
         
         # unir predição como dataset original
-        original_data['score'] = pred
+        original_data['score'] = pred[:, 1].tolist()
         
         return original_data.to_json(orient='records', date_format='iso')
