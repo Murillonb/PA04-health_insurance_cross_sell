@@ -5,11 +5,11 @@ import pandas as pd
 # limpezas, transformações e encodes
 class InsuranceAll(object):
     def __init__(self):
-        self.standard_scaler_annual_premium = pickle.load( open('../parameter/standard_scaler_annual_premium.pkl', 'rb'))
-        self.min_max_scaler_age             = pickle.load(open('../parameter/min_max_scaler_age.pkl', 'rb'))
-        self.min_max_scaler_vintage         = pickle.load(open('../parameter/min_max_scaler_vintage.pkl', 'rb'))
-        self.target_encode_region_code      = pickle.load(open('../parameter/target_encode_region_code.pkl', 'rb'))
-        self.fe_policy_sales_channel        = pickle.load(open('../parameter/fe_policy_sales_channel.pkl', 'rb'))
+        self.standard_scaler_annual_premium = pickle.load(open('parameter/standard_scaler_annual_premium.pkl', 'rb'))
+        self.min_max_scaler_age             = pickle.load(open('parameter/min_max_scaler_age.pkl', 'rb'))
+        self.min_max_scaler_vintage         = pickle.load(open('parameter/min_max_scaler_vintage.pkl', 'rb'))
+        self.target_encode_region_code      = pickle.load(open('parameter/target_encode_region_code.pkl', 'rb'))
+        self.fe_policy_sales_channel        = pickle.load(open('parameter/fe_policy_sales_channel.pkl', 'rb'))
         
     def data_cleaning(self, df1):
         # renomeando colunas
