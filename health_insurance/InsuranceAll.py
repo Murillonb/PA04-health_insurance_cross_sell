@@ -14,7 +14,7 @@ class InsuranceAll(object):
     def data_cleaning(self, df1):
         # renomeando colunas
         cols_new = ['id', 'gender', 'age', 'driving_license', 'region_code', 'previously_insured', 'vehicle_age', 'vehicle_damage', 
-                    'annual_premium', 'policy_sales_channel', 'vintage', 'response']
+                    'annual_premium', 'policy_sales_channel', 'vintage']
         
         df1.columns = cols_new
         
